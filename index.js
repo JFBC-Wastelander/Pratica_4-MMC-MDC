@@ -25,7 +25,7 @@ process.stdin.on("data", function (data) {
     }
 
     i = maior;
-    for (i; i <= numero1 * numero2; i ++) {
+    for (i; i <= numero1 * numero2; i++) {
       if (i % numero1 == 0 && i % numero2 == 0) {
         console.log("MMC: " + i);
         break;
@@ -33,7 +33,7 @@ process.stdin.on("data", function (data) {
     }
 
     i = menor;
-    for (i; i > 0; i --) {
+    for (i; i > 0; i--) {
       if (numero1 % i == 0 && numero2 % i == 0) {
         console.log("MDC: " + i);
         break;
