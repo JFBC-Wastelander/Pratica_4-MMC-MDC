@@ -11,18 +11,33 @@ process.stdin.on("data", function (data) {
     console.log("Digite seu segundo número.");
   } else {
     numero2 = input;
+
+    let i;
+    let maior;
+    let menor;
+
     if (numero1 > numero2) {
-      i = numero1;
+      maior = numero1;
+      menor = numero2;
     } else {
-      i = numero2;
+      maior = numero2;
+      menor = numero1;
     }
 
-    for (i; i <= numero1 * numero2; i++) {
+    i = maior;
+    for (i; i <= numero1 * numero2; i ++) {
       if (i % numero1 == 0 && i % numero2 == 0) {
         console.log("MMC: " + i);
         break;
       }
     }
-    process.exit();
+
+    i = menor;
+    for (i; i > 0; i --) {
+      if (numero1 % i == 0 && numero2 % i == 0) {
+        console.log("MDC: " + i);
+        break;
+      }
+    }
   }
 });
